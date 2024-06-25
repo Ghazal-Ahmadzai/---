@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    padding: 25px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.todo-header h2 {
+    margin-right: 10px;
+}
+
+.todo-body {
+    display: flex;
+    align-items: center;
+    background: palevioletred;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: transparent; 
+}
+
+.calendar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.plus-icon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#todo-date {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: palevioletred;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.todo-actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-actions img {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+
+.save-button,
+.cancel-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    outline: none;
+    width: 80px;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+    background-color: lightpink;
+}
+
+.edit-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.edit-input,
+.custom-select-trigger,
+.edit-date {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white; 
+    border: none; 
+}
+
+.edit-input {
+    width: 50%;
+}
+.edit-date{
+    width: 50%;
+}
+
+.edit-priority-container {
+    width: 50%;
+    position: relative;
+}
+
+
+.custom-select-trigger {
+    background-color: white;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%; 
+}
+
+.custom-select-options {
+    position: absolute;
+    width: auto; 
+    border: 1px solid #ccc; 
+    background-color: white;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.custom-select-options div {
+    padding: 10px; 
+    cursor: pointer;
+    background-color: #fff; 
+}
+
+.custom-select-options div:hover {
+    background-color: lightgrey; 
+}
+
+.custom-select-options div.selected {
+    background-color: lightgrey;
+}
+
+.todo-actions input[type="radio"] {
+    display: none;
+}
+
+.todo-actions label {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.todo-actions input[type="radio"]:checked + label {
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+}
+
+.completion-message {
+    background: palevioletred;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+    font-weight: bold;
+}

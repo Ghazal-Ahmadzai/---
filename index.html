@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-header">
+            <h2>To-Do List</h2>
+            <img src="images/pic to do.png" height="30px" alt="To-Do Icon">
+        </div>
+        <div class="todo-body">
+            <input type="text" id="todo-text" class="todo-input" placeholder="Add your task">
+            <div class="calendar-container">
+                <input type="date" id="todo-date" class="todo-input" style="display: none;">
+            </div>
+            <img src="images/plus.png" alt="+" class="plus-icon" id="AddUpdateClick">
+        </div>
+        <ul id="list-item" class="list-item"></ul>
+        <div id="completion-message" class="completion-message" style="display: none;">Task completed!</div>
+    </div>
+    <audio id="completed-sound" src="DING.mp3"></audio> 
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
